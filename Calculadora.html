@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">.tecla{font-size: 25px;
+width: 40px;
+padding: 5px}
+
+#tela {height: 30px;
+width: 165px}</style>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id="area">
+    <input dir="rtl" id="tela" type="text"> <br>
+    <input onclick="sete()" class="tecla" id="7" type="button" value="7">
+    <input onclick="oito()" class="tecla" id="8" type="button" value="8">
+    <input onclick="nove()" class="tecla" id="9" type="button" value="9">
+    <input onclick="div()" class="tecla" id="/" type="button" value="/ ">
+    <br>
+    <input onclick="quatro()" class="tecla" id="4" type="button" value="4">
+    <input onclick="cinco()" class="tecla" id="5" type="button" value="5">
+    <input onclick="seis()" class="tecla" id="6" type="button" value="6">
+   <input onclick="multi()" class="tecla" id="x" type="button" value="x">
+  
+  <br>
+    <input onclick="um()" class="tecla" id="1" type="button" value="1">
+    <input onclick="dois()" class="tecla" id="2" type="button" value="2">
+    <input onclick="tres()" class="tecla" id="3" type="button" value="3">
+   <input onclick="sub()" class="tecla" id="-" type="button" value="- ">
+  <br>
+    <input onclick="zero()" class="tecla" id="0" type="button" value="0">
+    <input onclick="ponto()" class="tecla" id="." type="button" value=". ">
+    <input onclick="igual()" class="tecla" id="=" type="button" value="=">
+   <input onclick="ad()" class="tecla" id="+" type="button" value="+">
+<br><input onclick="limpar()" id="c" type="button" value="limpar tela">
+  </div>
+  
+  
+
+<script>
+
+var one = ''
+var numOne = ''
+var two = ''
+var numTwo = ''
+
+var op = ''
+var c = document.getElementById('c')
+var _1 = document.getElementById("1")
+var _2 = document.getElementById("2")
+var _3 = document.getElementById("3")
+var _4 = document.getElementById("4")
+var _5 = document.getElementById("5")
+var _6 = document.getElementById("6")
+var _7 = document.getElementById("7")
+var _8 = document.getElementById("8")
+var _9 = document.getElementById("9")
+var _0 = document.getElementById("0")
+var _ponto = document.getElementById("ponto")
+var _igual = document.getElementById("igual")
+var _div = document.getElementById("/")
+var _multi = document.getElementById("x")
+var _sub = document.getElementById("-")
+var _ad = document.getElementById("+")
+
+var tela = document.getElementById("tela")
+
+function um (){
+  
+  tela.value += 1;
+
+}
+
+
+function dois () {
+  
+  
+    tela.value += 2;
+ 
+
+}
+
+function tres () {
+  
+  
+    tela.value += 3;
+ 
+
+}
+
+function quatro () {
+  
+  
+    tela.value += 4;
+ 
+
+}
+
+function cinco () {
+  
+  
+    tela.value += 5;
+ 
+
+}
+
+function seis () {
+  
+  
+    tela.value += 6;
+ 
+
+}
+
+function sete () {
+  
+  
+    tela.value += 7;
+ 
+
+}
+
+function oito () {
+  
+  
+    tela.value += 8;
+ 
+
+}
+
+
+function nove () {
+  
+  
+    tela.value += 9;
+ 
+
+}
+function zero () {
+  
+  
+    tela.value += 0;
+ 
+
+}
+
+
+
+
+
+function ad (a, b) {
+  op = "mais"
+  
+ 
+  
+  one = tela.value;
+  numOne = parseFloat(one, 10)
+  
+  tela.value = '';
+  
+  console.log(one)
+  console.log(numOne)
+  
+  
+}
+
+function sub (a, b) {
+ op = "menos";
+  
+  one = tela.value;
+  numOne = parseFloat(one, 10)
+  
+  tela.value = '';
+  
+  console.log(one)
+  console.log(numOne)
+  
+  
+}
+
+function div (a, b) {
+ op = "div";
+  
+  one = tela.value;
+  numOne = parseFloat(one, 10)
+  
+  tela.value = '';
+  
+  console.log(one)
+  console.log(numOne)
+  
+  
+}
+
+
+
+function multi (a, b) {
+ op = "multi";
+  
+  one = tela.value;
+  numOne = parseFloat(one, 10)
+  
+  tela.value = '';
+  
+  console.log(one)
+  console.log(numOne)
+  
+  
+}
+
+
+function igual () {
+  var a = tela.value
+  var numTwo = parseFloat(a, 10)
+  
+  if (op == "mais") { var c = numOne + numTwo;}
+  if (op == "menos"){var c = numOne - numTwo}
+  if (op == "div"){var c = numOne / numTwo}
+  if (op == "multi"){var c = numOne * numTwo}
+
+  
+  tela.value = c;
+}
+
+
+function ponto () {
+  
+      tela.value += ".";
+
+}
+
+
+function limpar(){
+  
+  tela.value ='';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script></body>
